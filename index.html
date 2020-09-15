@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harshil</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <script src="sketch.js"></script>
+    <script src="enemy.js"></script>
+    <script src="player.js"></script>
+  </body>
+</html>
+
+class Enemy
+{
+    constructor()
+    {
+        this.r=70;
+        this.x=width;
+        this.y=height-this.r;
+        this.speed=random(10,15 );
+    }
+
+    move()
+    {
+        this.x-=this.speed;
+
+        if(this.x+this.r<0)
+        {
+            score++;
+            this.x=width;
+        }
+    }
+    
+    show()
+    {
+        image(aImg,this.x,this.y,this.r,this.r);
+    }
+}
+{
+  "include": [
+    "*.js",
+    "libraries/*.js",
+    "c:\\Users\\DELL\\.vscode\\extensions\\samplavigne.p5-vscode-1.2.3\\p5types\\global.d.ts"
+  ]
+}
